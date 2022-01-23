@@ -10,3 +10,11 @@ class Account:
         self.password = password
         self.email = email
     
+    def save_account(self):
+
+        '''
+        save_contact method saves contact objects into contact_list
+        '''
+
+        Account.account_list.append(self)
+    
