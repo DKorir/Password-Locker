@@ -1,7 +1,3 @@
-import email
-from typing_extensions import Self
-
-
 class Account:
     """
     Class that generates instances of users.
@@ -14,10 +10,3 @@ class Account:
         self.password = password
         self.email = email
     
-    def save_account(self):
-
-        '''
-        save_account method saves account objects into account_list
-        '''
-
-        Account.account_list.append(self)
