@@ -26,3 +26,5 @@ class Account:
 
         Account.account_list.remove(self)
     
+    
+    
