@@ -29,7 +29,7 @@ class TestAccount(unittest.TestCase):
         test_delete_account to test if we can remove an account from our account list
         '''
         self.new_account.save_account()
-        test_account = Account("Test","user","0712345678","test@user.com") # account
+        test_account = Account("Test","user","123456","test@user.com") # account
         test_account.save_account()
 
         self.new_account.delete_account()# Deleting an account object
@@ -41,9 +41,22 @@ class TestAccount(unittest.TestCase):
         objects to our account_list
         '''
         self.new_account.save_account()
-        test_account = Account("Test","user","0712345678","test@user.com") # new account
+        test_account = Account("Test","user","123456","test@user.com") # new account
         test_account.save_account()
         self.assertEqual(len(Account.account_list),2)
+
+    def test_find_account_by_account_name(self):
+        '''
+        test to check if we can find an account by account_name and display information
+        '''
+
+        self.new_account.save_account()
+        test_account = Account("Test","user","234567","test@user.com") # new account
+        test_account.save_account()
+
+        found_account = Account.find_by_name("Test")
+
+        self.assertEqual(found_account.email,test_account.email)
 
 
 
