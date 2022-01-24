@@ -71,6 +71,13 @@ class TestAccount(unittest.TestCase):
 
         self.assertTrue(account_exists)
 
+    def test_view_all_accounts(self):
+        '''
+        method that returns a list of all accounts saved
+        '''
+        displayed = Account.display_accounts()
+        self.assertEqual(displayed,Account.account_list)
+
 
 
 if __name__ == '__main__':
