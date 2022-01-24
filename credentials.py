@@ -48,7 +48,7 @@ class Credentials:
         return False 
 
     @classmethod
-    def display_credentials(cls):  #check this line later
+    def display_credentials(cls):  #method that displays the credentials list
         '''
         method that returns the credentials list
         '''
