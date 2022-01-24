@@ -56,3 +56,9 @@ def del_credentials(credentials):
     Function to delete a credentails
     '''
     credentials.delete_credentials()
+
+def find_credentials(name):
+    '''
+    Function that finds a account by nane and returns the account
+    '''
+    return Credentials.find_by_name(name)
