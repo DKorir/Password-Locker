@@ -40,13 +40,19 @@ def display_accounts():
 
 def create_credentials(credentials_name,user_name,password,email):
     '''
-    Function to create a new account
+    Function to create a new credentials
     '''
     new_credentials = Credentials(credentials_name,user_name,password,email)
     return new_credentials
 
 def save_credentials(credentials):
     '''
-    Function to save account
+    Function to save credentials
     '''
     credentials.save_credentials() 
+
+def del_credentials(credentials):
+    '''
+    Function to delete a credentails
+    '''
+    credentials.delete_credentials()
