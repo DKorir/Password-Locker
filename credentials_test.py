@@ -54,7 +54,7 @@ class TestCredentials(unittest.TestCase):
 
     def test_find_credentials_by_credentials_name(self):
         """
-        test to check if we can find an account by account_name and display information
+        test to check if we can find an credebtials by credentials_name and display information
         """
         self.new_credentials.save_credentials()
         test_credentials = Credentials("Test","user","123456","user@gmail.com") # new credentials
