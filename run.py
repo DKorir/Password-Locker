@@ -33,3 +33,14 @@ def display_accounts():
     Function that returns all the saved accounts
     '''
     return Account.display_accounts() 
+
+
+
+#________CREDENTIALS________
+
+def create_credentials(credentials_name,user_name,password,email):
+    '''
+    Function to create a new account
+    '''
+    new_credentials = Credentials(credentials_name,user_name,password,email)
+    return new_credentials
