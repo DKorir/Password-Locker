@@ -9,3 +9,9 @@ def create_account(account_name,user_name,password,email):
     '''
     new_account = Account(account_name,user_name,password,email)
     return new_account
+
+def delete_account(account):
+    '''
+    Function to delete a account
+    '''
+    account.delete_account()
