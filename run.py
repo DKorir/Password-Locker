@@ -21,3 +21,9 @@ def find_account(name):
     Function that finds a account by nane and returns the account
     '''
     return Account.find_by_name(name)
+
+def check_existing_accounts(name):
+    '''
+    Function that check if an account exists with that name and return a Boolean
+    '''
+    return Account.account_exist(name) 
