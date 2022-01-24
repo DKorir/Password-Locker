@@ -4,17 +4,28 @@ from credentials import Credentials # impoting the credentials class
 class TestCredentials(unittest.TestCase):
     def setUp(self):
        
-        self.new_credentials = Credentials("Domie","Korir","dk2030","dk@gmail.com") # create Account object
+        self.new_credentials = Credentials("github","DKorir","0798286377Dd","dommykiprono76@gmail.com") # create credentials object
 
     def test_init(self):
         '''
         test_init test case to test if the object is initialized properly
         '''
 
-        self.assertEqual(self.new_credentials.credentials_name,"domie")
-        self.assertEqual(self.new_credentials.usr_name,"korir")
-        self.assertEqual(self.new_credentials.password,"dk2030")
-        self.assertEqual(self.new_credentials.email,"dk@gmail.com")
+        self.assertEqual(self.new_credentials.credentials_name,"github")
+        self.assertEqual(self.new_credentials.user_name,"DKorir")
+        self.assertEqual(self.new_credentials.password,"0798286377Dd")
+        self.assertEqual(self.new_credentials.email,"dommykiprono76@gmail.com")
+
+
+    def test_save_credentials(self):
+        '''
+        test_save_account test case to test if the account object is saved into
+         the account list
+        '''
+        self.new_credentials.save_credentials() # saving the new account
+        self.assertEqual(len(Credentials.credentials_list),1) 
+    
+    
 
 if __name__ == '__main__':
     unittest.main()

@@ -7,6 +7,16 @@ class Credentials:
     def __init__(self,credentials_name,user_name,
     password,email):
         self.credentials_name = credentials_name
-        self.usr_name = user_name
+        self.user_name = user_name
         self.password = password
         self.email = email
+
+    def save_credentials(self):
+
+        '''
+        save_account method saves account objects into account_list
+        '''
+
+        Credentials.credentials_list.append(self)
+
+    
