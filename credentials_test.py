@@ -37,10 +37,20 @@ class TestCredentials(unittest.TestCase):
         objects to our account_list
         """
         self.new_credentials.save_credentials()
-        test_credentials = Credentials("github","DKorir","0798286377Dd","dommykiprono76@gmail.com") # new credentials
+        test_credentials = Credentials("Test","user","123456","user@gmail.com") # new credentials
         test_credentials.save_credentials()
         self.assertEqual(len(Credentials.credentials_list),2)
-    
+
+
+    def test_delete_credentials(self):
+        """
+        test delete credentials to test if we can remove fromof credential list
+        """
+        self.new_credentials.save_credentials()
+        test_credentials = Credentials("Test","user","123456","user@gmail.com") # credentials
+        test_credentials.save_credentials()
+        self.new_credentials.     delete_credentials()# Deleting an credentials object
+        self.assertEqual(len(Credentials.credentials_list),1)
     
 
 if __name__ == '__main__':
