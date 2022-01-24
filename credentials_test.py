@@ -61,6 +61,17 @@ class TestCredentials(unittest.TestCase):
         test_credentials.save_credentials()
         found_credentials = Credentials.find_by_name("Test")
         self.assertEqual(found_credentials.email,test_credentials.email)
+
+    @classmethod
+    def credentials_exist(cls,name):
+        '''
+        Method that checks if a credentials exists from the credentials list.
+        '''
+        for credentials in cls.credentials_list:
+            if credentials.password == name:
+                    return credentials
+
+        return False
     
 
 if __name__ == '__main__':
