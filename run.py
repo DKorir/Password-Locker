@@ -15,3 +15,9 @@ def delete_account(account):
     Function to delete a account
     '''
     account.delete_account()
+
+def find_account(name):
+    '''
+    Function that finds a account by nane and returns the account
+    '''
+    return Account.find_by_name(name)
