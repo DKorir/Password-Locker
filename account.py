@@ -48,7 +48,7 @@ class Account:
         return False
 
     @classmethod
-    def view_accounts(cls):
+    def display_accounts(cls):
         '''
         method that returns the account list
         '''
