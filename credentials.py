@@ -46,3 +46,10 @@ class Credentials:
             if credentials.password == name:
                     return credentials
         return False 
+
+    @classmethod
+    def display_credentials(cls):  #check this line later
+        '''
+        method that returns the credentials list
+        '''
+        return cls.credentials_list 
