@@ -27,7 +27,7 @@ As a user I would like:
 
 ## SetUp / Installation Requirements
 ### Prerequisites
-* python3.8
+* python3.8.10
 * internet connection
 * For linux/ubuntu users : Git
 
@@ -46,7 +46,7 @@ As a user I would like:
 ## Testing the Application
 * To run the tests for the class file and check if it functions well:
 
-        $ python3.6 credentials_test.py
+        $ python3.8.10 credentials_test.py
         
 ## Technologies Used
 * Python3.8.10
